@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p>ingrese su nombre: <input type="text" name="nombre" id="nombre"></p>
+    <p>ingrese su apellido: <input type="text" name="apellido" id="apellido"></p>
+    <p><input type="button" value="mostrar nombre completo" onclick="mostrar()"></p>
+    <input type="text" id="nombreYApellido" readonly>
+    <script>
+        function mostrar(){
+          let nombre = document.getElementById('nombre').value
+          let apellido = document.getElementById('apellido').value
+          document.getElementById('nombreYApellido').value=nombre + " "+ apellido
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>ingrese su contraseña: <input type="password" id="clave"></p>
+        <br>
+        <p>repita la contraseña: <input type="password"  id="claveRepe"></p>
+        <p><input type="button" value="confirmar" onclick="validar()"></p>
+    </form>
+
+    <script>
+        function validar() {
+            let contra= document.getElementById('clave').value
+            let contra2= document.getElementById('claveRepe').value 
+
+            if (contra === contra2){
+                alert("las contraseñas coinciden")
+            }else{
+                alert("las contraseñas no coinciden")
+            }
+        }
+
+    </script>
+</body>
+</html>

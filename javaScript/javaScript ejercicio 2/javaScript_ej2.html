@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>ingrese un numero: <input type="text" id="num"></p>
+        <p><input type="button" value="confimar" onclick="operacion()"></p>
+    </form>
+    <script>
+        function operacion(){
+            let numero =parseInt(document.getElementById('num').value);
+
+            alert(numero * numero * numero)
+        }
+    </script>
+</body>
+</html>
