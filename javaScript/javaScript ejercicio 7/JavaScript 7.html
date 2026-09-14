@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>presupuesto pc</title>
+</head>
+<body>
+    <h2>Componentes</h2>
+
+    <p>procesadores</p>
+    <select name="procesador" id="proce">
+        <option value=""></option>
+        <option value="400">intel I3</option>
+        <option value="600">Intel I5</option>
+        <option value="800">Intel I7</option>
+    </select>
+    <br>
+    <p>monitor</p>   
+    <select name="Monitor" id="moni">
+        <option value=""></option>
+        <option value="250">Samsung 20'</option>
+        <option value="350">Samsung 22'</option>
+        <option value="550">Samsung 26'</option>
+    </select>
+    <br>
+    <p>disco duro</p>
+    <select name="discoDuro" id="memo">
+        <option value=""></option>
+        <option value="300">500 Gb</option>
+        <option value="440">1 Tb</option>
+        <option value="550">3 Tb</option>
+    </select>
+    <br><br>
+
+    <input type="button" value="calcular" id="calcular" onclick="calculoTotal()">
+
+    <script>
+        function calculoTotal(){
+            let procesador= parseInt(document.getElementById('proce').value);
+            let Monitor= parseInt(document.getElementById('moni').value);
+            let discoDuro= parseInt(document.getElementById('memo').value);
+
+            alert("precio total: "+ (procesador+Monitor+discoDuro)+ "$" );
+        }
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2>incio de sesion</h2>
+    <form>
+        <p>ingrese su nombre y apellido:</p>
+        <p><input type="text" id="nombre"></p>
+        <br>
+        <p>ingrese su contraseña:</p>
+        <p><input type="password"  id="contra" onblur="longitud()"></p>
+    </form>
+
+    <script>
+        function longitud(){
+            let longContra= document.getElementById('contra').value.length;
+            if (longContra < 7 ){
+                alert("la contraseña es demasiado corta")
+            }else if (longContra > 20){
+                alert("la contraseña es demasiado larga")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Preguntas</h2>
+    <p>¿cuantas provincias tiene argentina?</p>
+        <select id="pregunta1">
+           <option value="incorrecto">27</option>
+           <option value="incorrecto">21</option>
+           <option value="correcto">23</option> 
+        </select>
+        <br>
+        <p>¿quien fue el presidente democratico de la argentina?</p>
+        <select id="pregunta2">
+           <option value="incorrecto">alfonsin</option>
+           <option value="correcto">yrigoyen</option>
+           <option value="incorrecto">peron</option> 
+        </select>
+        <br>
+        <p>¿segun el ultimo censo cuanta poblacion hay en argentina?</p>
+        <select id="pregunta3">
+           <option value="incorrecto">43 millones</option>
+           <option value="correcto">46 millones</option>
+           <option value="incorrecto">49 millones</option> 
+        </select>
+        <br>
+        <p>¿quien es el actual presidnete de Argentina?</p>
+        <select id="pregunta4">
+           <option value="correcto">Javier Milei</option>
+           <option value="incorrecto">Alberto Fernandez</option>
+           <option value="incorrecto">Lionel Messi</option> 
+        </select>
+        <br><br>
+
+        <input type="button" value="Evaluar" onclick="evaluar()">
+    
+    <script>
+        function evaluar(){
+            let correctas= 0
+            let incorrectas= 0
+
+            for (let i=1 ;i <= 4 ; i++ ){
+                let respuestas=document.getElementById('pregunta'+i).value;
+
+                if (respuestas==="correcto"){
+                    correctas++
+                }else if (respuestas==="incorrecto"){
+                    incorrectas++
+                }
+            }
+
+            alert("respuestas correctas: "+correctas)
+            alert("respuestas incorrectas: "+incorrectas)
+
+        }
+    </script>
+</body>
+</html>
